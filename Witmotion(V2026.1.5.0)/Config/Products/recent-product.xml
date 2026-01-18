@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProductModels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Model>WT61C_TTL</Model>
+  <Model>JY-ME02P-485</Model>
+  <Model>WTRTK-982</Model>
+  <Model>WTR03L</Model>
+  <Model>WTRTK-4G</Model>
+  <Model>WTGAHRS3-485</Model>
+  <Model>WTRTK-280R</Model>
+  <Model>WTVB02-485</Model>
+  <Model>BWT901BLECL5.0</Model>
+  <Model>HWT901B-CAN</Model>
+  <Model>HWT6052</Model>
+  <Model>WT901PD-LTE</Model>
+  <Model>HWT9053-485</Model>
+  <Model>HWT6052-485</Model>
+  <Model>WTGAHRS3-232</Model>
+  <Model>HWT906P</Model>
+  <Model>WT9011DCL_RF</Model>
+  <Model>LORAWAN-DTU</Model>
+  <Model>JY62</Model>
+  <Model>JY61</Model>
+  <Model>HWT901B-485</Model>
+  <Model>WTVB02-LORAWAN</Model>
+  <Model>WT901WIFI</Model>
+  <Model>WTVB05D-CAN</Model>
+  <Model>WTRTK-960R</Model>
+  <Model>VL53-400</Model>
+  <Model>WT-SEM63</Model>
+  <Model>HWT6053-485</Model>
+  <Model>WTRTK-960</Model>
+  <Model>LW-DSQ</Model>
+  <Model>LW-CN470</Model>
+</ProductModels>
