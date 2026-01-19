@@ -1,0 +1,22 @@
+.\systeminit.o: ..\SRC\SystemInit.c
+.\systeminit.o: ..\SRC\SystemInit.h
+.\systeminit.o: ..\Libraries\CMSIS\Core\CM3\stm32f10x.h
+.\systeminit.o: ..\Libraries\CMSIS\Core\CM3\core_cm3.h
+.\systeminit.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdint.h
+.\systeminit.o: ..\Libraries\CMSIS\Core\CM3\system_stm32f10x.h
+.\systeminit.o: ..\SRC\stm32f10x_conf.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
+.\systeminit.o: ..\Libraries\CMSIS\Core\CM3\stm32f10x.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
+.\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\systeminit.o: ..\SRC\comunication.h
+.\systeminit.o: ..\SRC\MBmasterTimer.h
+.\systeminit.o: ..\SRC\Timers.h
+.\systeminit.o: ..\SRC\SystemTimer.h

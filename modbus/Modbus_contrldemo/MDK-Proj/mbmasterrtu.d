@@ -1,0 +1,24 @@
+.\mbmasterrtu.o: ..\SRC\MBMasterRtu.c
+.\mbmasterrtu.o: ..\SRC\MBMasterRtu.h
+.\mbmasterrtu.o: ..\Libraries\CMSIS\Core\CM3\stm32f10x.h
+.\mbmasterrtu.o: ..\Libraries\CMSIS\Core\CM3\core_cm3.h
+.\mbmasterrtu.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdint.h
+.\mbmasterrtu.o: ..\Libraries\CMSIS\Core\CM3\system_stm32f10x.h
+.\mbmasterrtu.o: ..\SRC\stm32f10x_conf.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
+.\mbmasterrtu.o: ..\Libraries\CMSIS\Core\CM3\stm32f10x.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
+.\mbmasterrtu.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\mbmasterrtu.o: ..\SRC\quene.h
+.\mbmasterrtu.o: ..\SRC\usart.h
+.\mbmasterrtu.o: ..\SRC\MBMasterTimer.h
+.\mbmasterrtu.o: ..\SRC\ModbusMaster.h
+.\mbmasterrtu.o: ..\SRC\ModbusCommon.h
+.\mbmasterrtu.o: ..\SRC\mbcrc.h

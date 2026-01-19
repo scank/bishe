@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+H:\customer\¿Ó—ﬁ«Ì\code lib\modbuslib\MDK-Proj\TestBoard.uvproj
+Project File Date:  07/08/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling MBcrc.c...
+compiling MBMasterFunc.c...
+compiling MBMasterRtu.c...
+compiling MBMasterTimer.c...
+compiling ModbusMaster.c...
+..\SRC\ModbusMaster.c(268): warning:  #188-D: enumerated type mixed with another type
+..\SRC\ModbusMaster.c:                                                                          MBErrCode=Pop_Quene(pquene);
+..\SRC\ModbusMaster.c:                                                                                   ^
+..\SRC\ModbusMaster.c: ..\SRC\ModbusMaster.c: 1 warning, 0 errors
+compiling Quene.c...
+compiling SystemInit.c...
+compiling Timers.c...
+..\SRC\Timers.c(38): warning:  #188-D: enumerated type mixed with another type
+..\SRC\Timers.c:                                        ptimer[i].TimerState=TimerState(TimerSta);
+..\SRC\Timers.c:                                                            ^
+..\SRC\Timers.c(39): warning:  #188-D: enumerated type mixed with another type
+..\SRC\Timers.c:                                        ptimer[i].TimerAttr=TimerAttr(TimerAttrib);
+..\SRC\Timers.c:                                                           ^
+..\SRC\Timers.c(62): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\SRC\Timers.c:        if(i>=0 && i<TIMERS_MAX_NUM)
+..\SRC\Timers.c:            ^
+..\SRC\Timers.c(78): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\SRC\Timers.c:        if(i>=0 && i<TIMERS_MAX_NUM)
+..\SRC\Timers.c:            ^
+..\SRC\Timers.c(92): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\SRC\Timers.c:        if(i>=0 && i<TIMERS_MAX_NUM)
+..\SRC\Timers.c:            ^
+..\SRC\Timers.c(107): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\SRC\Timers.c:        if(i>=0 && i<TIMERS_MAX_NUM)
+..\SRC\Timers.c:            ^
+..\SRC\Timers.c: ..\SRC\Timers.c: 6 warnings, 0 errors
+creating Library...
+"modbusmasterRTU.lib" - 0 Error(s), 7 Warning(s).

@@ -1,0 +1,9 @@
+mbmasterrtu.o: ..\SRC\MBMasterRtu.c
+mbmasterrtu.o: ..\SRC\MBMasterRtu.h
+mbmasterrtu.o: ..\SRC\typedef.h
+mbmasterrtu.o: ..\SRC\callbackfunction.h
+mbmasterrtu.o: ..\SRC\quene.h
+mbmasterrtu.o: ..\SRC\MBMasterTimer.h
+mbmasterrtu.o: ..\SRC\ModbusMaster.h
+mbmasterrtu.o: ..\SRC\ModbusCommon.h
+mbmasterrtu.o: ..\SRC\mbcrc.h

@@ -1,0 +1,107 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 2 ¶Ù×ÏºÀ, HP Inc., LIC=21E4T-RYMMU-SBYEJ-UBVFR-PG193-ZL7MP
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  D:\keil 5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      CMSIS_AGDI.dll V1.28.3.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+E:\Users\DZH\Desktop\bishe\ÂóÂÖÏÂÎ»»ú\HAHAHA\USER\LED.uvprojx
+Project File Date:  01/20/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\keil 5\ARM\ARMCC\Bin'
+Rebuild target 'LED'
+compiling MBcrc.c...
+compiling MBMasterRtu.c...
+compiling motor.c...
+compiling MBMasterTimer.c...
+compiling led.c...
+compiling SystemInit.c...
+compiling Quene.c...
+compiling main.c...
+compiling ModbusMaster.c...
+..\SOFTWARE\ModbusMaster.c(268): warning:  #188-D: enumerated type mixed with another type
+  									MBErrCode=Pop_Quene(pquene);
+..\SOFTWARE\ModbusMaster.c(289): warning:  #223-D: function "USART2_RXTXSwitch" declared implicitly
+  	USART2_RXTXSwitch(FALSE,TRUE);
+..\SOFTWARE\ModbusMaster.c(319): warning:  #223-D: function "USART2_RXTXSwitch" declared implicitly
+  	USART2_RXTXSwitch(FALSE,TRUE);
+..\SOFTWARE\ModbusMaster.c: 3 warnings, 0 errors
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling MBMasterFunc.c...
+compiling Timers.c...
+..\SOFTWARE\Timers.c(38): warning:  #188-D: enumerated type mixed with another type
+  					ptimer[i].TimerState=
+imerState(TimerSta);
+..\SOFTWARE\Timers.c(39): warning:  #188-D: enumerated type mixed with another type
+  					ptimer[i].TimerAttr=
+imerAttr(TimerAttrib);
+..\SOFTWARE\Timers.c(62): warning:  #186-D: pointless comparison of unsigned integer with zero
+  	if(i>=0 && i<TIMERS_MAX_NUM)
+..\SOFTWARE\Timers.c(78): warning:  #186-D: pointless comparison of unsigned integer with zero
+  	if(i>=0 && i<TIMERS_MAX_NUM)
+..\SOFTWARE\Timers.c(92): warning:  #186-D: pointless comparison of unsigned integer with zero
+  	if(i>=0 && i<TIMERS_MAX_NUM)
+..\SOFTWARE\Timers.c(107): warning:  #186-D: pointless comparison of unsigned integer with zero
+  	if(i>=0 && i<TIMERS_MAX_NUM)
+..\SOFTWARE\Timers.c: 6 warnings, 0 errors
+compiling Comunication.c...
+compiling Usart.c...
+assembling startup_stm32f10x_hd.s...
+compiling SystemTimer.c...
+compiling delay.c...
+compiling core_cm3.c...
+compiling misc.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_gpio.c...
+compiling sys.c...
+compiling commonusart.c...
+..\SYSTEM\Commonusart\commonusart.c(224): warning:  #550-D: variable "temp"  was set but never used
+  	u8 temp;
+..\SYSTEM\Commonusart\commonusart.c(320): warning:  #550-D: variable "temp"  was set but never used
+  	u8 temp;
+..\SYSTEM\Commonusart\commonusart.c(336): warning:  #550-D: variable "temp"  was set but never used
+  	u8 temp;    
+..\SYSTEM\Commonusart\commonusart.c: 3 warnings, 0 errors
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=4388 RO-data=336 RW-data=176 ZI-data=2800  
+FromELF: creating hex file...
+"..\OBJ\LED.axf" - 0 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.2.0.pack
+                Keil.STM32F1xx_DFP.2.2.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_LED
+  D:\keil 5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

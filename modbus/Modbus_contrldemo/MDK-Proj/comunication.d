@@ -1,0 +1,22 @@
+.\comunication.o: ..\SRC\Comunication.c
+.\comunication.o: ..\SRC\Comunication.h
+.\comunication.o: ..\Libraries\CMSIS\Core\CM3\stm32f10x.h
+.\comunication.o: ..\Libraries\CMSIS\Core\CM3\core_cm3.h
+.\comunication.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdint.h
+.\comunication.o: ..\Libraries\CMSIS\Core\CM3\system_stm32f10x.h
+.\comunication.o: ..\SRC\stm32f10x_conf.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
+.\comunication.o: ..\Libraries\CMSIS\Core\CM3\stm32f10x.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
+.\comunication.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\comunication.o: ..\SRC\Quene.h
+.\comunication.o: ..\SRC\USART.h
+.\comunication.o: ..\SRC\ModbusMaster.h
+.\comunication.o: ..\SRC\ModbusCommon.h
