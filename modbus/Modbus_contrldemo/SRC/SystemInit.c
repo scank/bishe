@@ -64,7 +64,6 @@ void System_Init(void)
 	Timer1_Init();
 
 	MRtimerInit();
-
 	COM_Init();
 
 

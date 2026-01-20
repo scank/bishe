@@ -32,3 +32,5 @@
 ..\obj\mbmasterfunc.o: ..\SOFTWARE\quene.h
 ..\obj\mbmasterfunc.o: ..\SOFTWARE\mbcrc.h
 ..\obj\mbmasterfunc.o: ..\SOFTWARE\ModbusCommon.h
+..\obj\mbmasterfunc.o: ..\HARDWARE\LED\led.h
+..\obj\mbmasterfunc.o: ..\SYSTEM\sys\sys.h

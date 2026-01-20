@@ -2,7 +2,7 @@
 #include "MBMasterFunc.h"
 #include "quene.h"
 #include "MBMasterRtu.h"
-
+#include "led.h"
 
 
 
@@ -85,12 +85,13 @@ bool MB_ReadHoldReg(u16 uiSlaveAddr,u16 uiRegStartAddr,u16 uiRegCnt)
 	
 		if(MBEvent==MM_EVENT_NONE)
 			{
-	
+				
 				pquene=MBMR_GetSndbufaddr();
 				
 				
 				if(pquene)
 					{
+						
 						MMreadholdreg.pquene=pquene;
 						*MMreadholdreg.pslaveaddr=uiSlaveAddr;
 						MMreadholdreg.regaddr=uiRegStartAddr;
@@ -100,6 +101,7 @@ bool MB_ReadHoldReg(u16 uiSlaveAddr,u16 uiRegStartAddr,u16 uiRegCnt)
 						
 						if(MF_SND_Readholdingreg(&MMreadholdreg))
 							{
+								
 								MBErrCode=MB_ERR_NONE;
 								MBEvent=MM_EVENT_SND_READY;
 								return TRUE;

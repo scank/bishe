@@ -3,7 +3,7 @@
 #include "stm32f10x.h"
 #include "ModbusCommon.h"
 #include "quene.h"
-
+#include "Usart.h"
 
 typedef enum __MBEVENT
 {

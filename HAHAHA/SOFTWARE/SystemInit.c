@@ -62,7 +62,7 @@ void System_Init(void)
 	RCC_Configuration();
 	TIMER_ArrayInit();
 	Timer1_Init();
-
+	
 	MRtimerInit();
 
 	COM_Init();

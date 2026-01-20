@@ -30,3 +30,4 @@
 ..\obj\motor.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\motor.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\motor.o: ..\SYSTEM\sys\sys.h
+..\obj\motor.o: ..\HARDWARE\LED\led.h

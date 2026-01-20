@@ -32,9 +32,11 @@
 ..\obj\main.o: ..\SYSTEM\sys\sys.h
 ..\obj\main.o: ..\SYSTEM\Commonusart\commonusart.h
 ..\obj\main.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: ..\HARDWARE\WHELL\motor.h
 ..\obj\main.o: ..\HARDWARE\LED\led.h
 ..\obj\main.o: ..\SOFTWARE\ModbusMaster.h
 ..\obj\main.o: ..\SOFTWARE\ModbusCommon.h
 ..\obj\main.o: ..\SOFTWARE\quene.h
+..\obj\main.o: ..\SOFTWARE\Usart.h
 ..\obj\main.o: ..\SOFTWARE\Comunication.h
 ..\obj\main.o: ..\SOFTWARE\SystemInit.h

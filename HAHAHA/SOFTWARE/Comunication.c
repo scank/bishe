@@ -11,10 +11,10 @@ static u16 StopBit[2]={USART_StopBits_2,USART_StopBits_1};
 
 void COM_Init(void)
 {
-	USART2_ConfigurationParam(BaudRate[5]\
+	USART2_ConfigurationParam(BaudRate[0]\
 								,DataBit[1]\
-								,StopBit[0]\
-								,ParityrAra[0]);
+								,StopBit[1]\
+								,ParityrAra[2]);
 
 }
 

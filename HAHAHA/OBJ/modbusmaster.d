@@ -31,5 +31,8 @@
 ..\obj\modbusmaster.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\modbusmaster.o: ..\SOFTWARE\ModbusCommon.h
 ..\obj\modbusmaster.o: ..\SOFTWARE\quene.h
+..\obj\modbusmaster.o: ..\SOFTWARE\Usart.h
 ..\obj\modbusmaster.o: ..\SOFTWARE\MBMasterFunc.h
 ..\obj\modbusmaster.o: ..\SOFTWARE\MBMasterRtu.h
+..\obj\modbusmaster.o: ..\HARDWARE\LED\led.h
+..\obj\modbusmaster.o: ..\SYSTEM\sys\sys.h

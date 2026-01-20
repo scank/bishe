@@ -1,7 +1,7 @@
 #include "Timer.h"
 
 u8 modbus_query_flag;
-u8 timer_1 = 0;
+u16 timer_1 = 0;
 u16 timer_2 = 0;
 /*
 	波特率 9600
@@ -54,18 +54,18 @@ void TIM1_UP_IRQHandler(void)
 		UartRxMonitor(1);
 		timer_1++;
 		timer_2++;
-		if(timer_1 >= 20)
+		if(timer_1 >= 300)
 		{
 			timer_1 = 0;
 			// 在这里添加20ms中断的处理代码
 			encoder_car();
-			
+			modbus_query_flag = 1;
 		}
-		if(timer_2 >= 2000)
+		if(timer_2 >= 500)
 		{
 			timer_2 = 0;
 			LED1 = !LED1;
-			modbus_query_flag = 1;
+			
 //			printf("%.1f ,%.1f ,%.1f ,%.1f ,%.2f ,%.2f ,%.2f ,%.2f ,%.2f ,%.2f \r\n",
 //					speed_fl_rpm, speed_fr_rpm, speed_bl_rpm, speed_br_rpm,
 //					fAcc[0],fAcc[1],fAcc[2],fAngle[0],fAngle[1],fAngle[2]);

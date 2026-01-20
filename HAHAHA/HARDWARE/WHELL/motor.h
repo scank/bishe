@@ -2,12 +2,16 @@
 #define __MOTOR_H
 #include "stm32f10x.h"                  // Device header"
 #include "sys.h"
+#include "led.h"
 
 #define PULSE_PER_ROUND  17    // 编码器线数
 #define REDUCTION_RATIO  27    // 减速比
 #define WHEEL_DIAMETER   0.077f// 轮子直径(m)
 #define PI               3.1415926f
 
+extern u8 flag_1;
+
+void TIM3_Int_Init(u16 arr, u16 psc);
 void Balance_Motor_Init(void);
 void PWM_Init(u16 arr,u16 psc);//初始化PWM 10KHZ 高频可以防止电机低频时的尖叫声  7200 1
 int Myabs(int a);

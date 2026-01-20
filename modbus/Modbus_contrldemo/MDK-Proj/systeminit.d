@@ -16,6 +16,9 @@
 .\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
 .\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\systeminit.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\systeminit.o: ..\SRC\ModbusMaster.h
+.\systeminit.o: ..\SRC\ModbusCommon.h
+.\systeminit.o: ..\SRC\quene.h
 .\systeminit.o: ..\SRC\comunication.h
 .\systeminit.o: ..\SRC\MBmasterTimer.h
 .\systeminit.o: ..\SRC\Timers.h

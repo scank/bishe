@@ -31,4 +31,6 @@
 ..\obj\commonusart.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\commonusart.o: ..\SYSTEM\Commonusart\commonusart.h
 ..\obj\commonusart.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\commonusart.o: ..\HARDWARE\WHELL\motor.h
+..\obj\commonusart.o: ..\HARDWARE\LED\led.h
 ..\obj\commonusart.o: D:\keil 5\ARM\ARMCC\Bin\..\include\string.h

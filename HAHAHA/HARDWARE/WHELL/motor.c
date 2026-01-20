@@ -32,6 +32,56 @@ pwm信号的产生是tim8 对应如下
 
 */
 
+u8 flag_1 = 0;
+u16 timmer_3 = 0;
+void TIM3_Int_Init(u16 arr, u16 psc) {
+    TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+    NVIC_InitTypeDef NVIC_InitStructure;
+    // 1. 时钟使能
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+    
+    // 2. 时基配置
+    TIM_TimeBaseStructure.TIM_Period = arr;
+    TIM_TimeBaseStructure.TIM_Prescaler = psc;
+    TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+    
+    // 3. 中断使能
+    TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
+    
+    // 4. NVIC配置
+
+    NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+    
+    // 5. 启动定时器
+    TIM_Cmd(TIM3, ENABLE);
+}
+// TIM3 中断服务函数
+void TIM3_IRQHandler(void)
+{
+    // 判断是否为 TIM2 更新中断
+    if (TIM_GetITStatus(TIM3, TIM_IT_Update) == SET)
+    {
+		timmer_3++;
+		if(timmer_3 >=50)
+		{
+			
+			flag_1 = 1;
+			timmer_3 = 0;
+		}
+		
+        // 清除 TIM2 更新中断标志位
+        TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
+    }
+
+}
+
+
 void Balance_Motor_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
