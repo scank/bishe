@@ -212,7 +212,7 @@ void UartDriver(void)
  ***************************************************************************************************/   
 void UartDriverMe(void)
 {
-	u8 i;
+//	u8 i;
 	unsigned int crc;
 	unsigned char crch,crcl;
 	static unsigned char len;
@@ -222,25 +222,25 @@ void UartDriverMe(void)
 		modbus.Modbus_RX_Flag = 0;   // 帧接收完成标志清零
 		len = UartRead(buf, sizeof(buf));  // 将接收到的命令读到缓冲区中
 		 
-        printf("\r\n收到Modbus响应(%d字节): ", len);// 调试输出
-		for(i = 0; i < len; i++) {
-            printf("%02X ", buf[i]);
-        }
-        printf("\r\n");
+//      printf("\r\n收到Modbus响应(%d字节): ", len);// 调试输出
+//		for(i = 0; i < len; i++) {
+//            printf("%02X ", buf[i]);
+//      }
+//        printf("\r\n");
 		
 		crc       = GetCRC16(buf,len-2);       					//计算CRC校验值，除去CRC校验值
 		crch=crc  >> 8;    										//crc高位
 		crcl=crc  &  0xFF;										//crc低位
-		if((buf[len-2] == crcl) && (buf[len-1] == crch))  // Modbus CRC低字节在前
+		if((buf[len-2] == crch) && (buf[len-1] == crcl))  // Modbus CRC低字节在前
         {
-            printf("CRC校验通过\r\n");
+            //printf("CRC-gogogo\r\n");
             
             // 解析Modbus响应
             ParseModbusResponse(buf, len);
         }
 		else
         {
-            printf("CRC校验失败! 计算CRC: %02X%02X, 接收CRC: %02X%02X\r\n", 
+            printf("CRC-error now-CRC: %02X%02X, receive-CRC: %02X%02X\r\n", 
                    crch, crcl, buf[len-2], buf[len-1]);
         }
 		
@@ -260,17 +260,21 @@ void ParseModbusResponse(u8 *buf, u8 len)
     u8 slave_addr = buf[0];     // 从机地址
     u8 func_code = buf[1];      // 功能码
     u8 byte_count = buf[2];     // 数据字节数
-    
-    printf("从机地址: 0x%02X, 功能码: 0x%02X, 字节数: %d\r\n", 
-           slave_addr, func_code, byte_count);
-    
+	//调试专用    
+//    printf("addr: 0x%02X, ma: 0x%02X, count: %d\r\n", 
+//           slave_addr, func_code, byte_count);
+//	
+//	for(i = 0; i < len; i++) {
+//		printf("%02X ", buf[i]);
+//	}
+//	printf("\r\n");
     // 处理03功能码响应（读保持寄存器）
     if(func_code == 0x03)
     {
         // 检查数据长度是否匹配
         // 字节数 + 地址(1) + 功能码(1) + 字节数字段(1) + CRC(2) = 总长度
         if(len != (byte_count + 5)) {
-            printf("数据长度不匹配! 期望: %d, 实际: %d\r\n", byte_count+5, len);
+            printf("data length not same! target: %d, fact: %d\r\n", byte_count+5, len);
             return;
         }
         
@@ -278,7 +282,7 @@ void ParseModbusResponse(u8 *buf, u8 len)
 		RegCount = byte_count / 2;
         
         if(RegCount > MAX_REGISTERS) {
-            printf("寄存器数量超过最大值! 接收: %d, 最大: %d\r\n", 
+            printf("count overflow max! receive: %d, max: %d\r\n", 
                    RegCount, MAX_REGISTERS);
             RegCount = MAX_REGISTERS;
         }

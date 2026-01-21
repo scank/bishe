@@ -12,6 +12,7 @@
 "..\obj\oled.o"
 "..\obj\key.o"
 "..\obj\modbus.o"
+"..\obj\translation.o"
 "..\obj\core_cm3.o"
 "..\obj\startup_stm32f10x_hd.o"
 "..\obj\misc.o"

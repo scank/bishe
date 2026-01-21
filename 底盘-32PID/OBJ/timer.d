@@ -38,4 +38,6 @@
 ..\obj\timer.o: ..\SOFTWARE\modbus\modbus.h
 ..\obj\timer.o: ..\SYSTEM\delay\delay.h
 ..\obj\timer.o: ..\SYSTEM\usart\usart.h
+..\obj\timer.o: ..\SOFTWARE\Translation\Translation.h
+..\obj\timer.o: ..\SOFTWARE\modbus\modbus.h
 ..\obj\timer.o: ..\HARDWARE\LED\led.h

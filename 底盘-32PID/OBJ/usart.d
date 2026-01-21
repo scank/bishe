@@ -35,4 +35,6 @@
 ..\obj\usart.o: ..\SOFTWARE\modbus\modbus.h
 ..\obj\usart.o: ..\SYSTEM\delay\delay.h
 ..\obj\usart.o: ..\SYSTEM\usart\usart.h
+..\obj\usart.o: ..\SOFTWARE\Translation\Translation.h
+..\obj\usart.o: ..\SOFTWARE\modbus\modbus.h
 ..\obj\usart.o: D:\keil 5\ARM\ARMCC\Bin\..\include\string.h

@@ -224,7 +224,7 @@ void USART1_IRQHandler(void)
 	u8 temp;
 	if(USART_GetITStatus(USART1, USART_IT_RXNE)!=RESET)
 	{
-		temp=USART_ReceiveData(USART1);
+		temp=USART_ReceiveData(USART1); 
 	}
 } 
 	

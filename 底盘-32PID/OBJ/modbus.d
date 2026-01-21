@@ -35,3 +35,4 @@
 ..\obj\modbus.o: ..\SYSTEM\usart\usart.h
 ..\obj\modbus.o: ..\HARDWARE\WHELL\motor.h
 ..\obj\modbus.o: ..\SOFTWARE\modbus\modbus.h
+..\obj\modbus.o: ..\SOFTWARE\Translation\Translation.h

@@ -35,9 +35,10 @@
 ..\obj\main.o: ..\HARDWARE\WHELL\motor.h
 ..\obj\main.o: ..\SOFTWARE\modbus\modbus.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
+..\obj\main.o: ..\SOFTWARE\Translation\Translation.h
+..\obj\main.o: ..\SOFTWARE\modbus\modbus.h
 ..\obj\main.o: ..\HARDWARE\LED\led.h
 ..\obj\main.o: ..\HARDWARE\Timer\Timer.h
 ..\obj\main.o: ..\HARDWARE\WHELL\Encode.h
 ..\obj\main.o: ..\HARDWARE\OLED\OLED.h
 ..\obj\main.o: D:\keil 5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\main.o: ..\HARDWARE\KEY\key.h

@@ -3,6 +3,7 @@
 u8 modbus_query_flag;
 u16 timer_1 = 0;
 u16 timer_2 = 0;
+ModbusState_t modbus_state = MODBUS_IDLE;
 /*
 	波特率 9600
 	1位数据的时间为 1000000us/9600bit/s = 104us
@@ -54,24 +55,22 @@ void TIM1_UP_IRQHandler(void)
 		UartRxMonitor(1);
 		timer_1++;
 		timer_2++;
-		if(timer_1 >= 300)
+		if(timer_1 >= 200)
 		{
 			timer_1 = 0;
-			// 在这里添加20ms中断的处理代码
-			encoder_car();
+			// 在这里添加200ms中断的处理代码
+//			encoder_car();
+//			if(modbus_state == MODBUS_IDLE)
+//			{
+//				modbus_query_flag = 1;
+//				modbus_state = MODBUS_SENDING;
+//			}
 			modbus_query_flag = 1;
 		}
-		if(timer_2 >= 500)
+		if(timer_2 >= 200)
 		{
 			timer_2 = 0;
 			LED1 = !LED1;
-			
-//			printf("%.1f ,%.1f ,%.1f ,%.1f ,%.2f ,%.2f ,%.2f ,%.2f ,%.2f ,%.2f \r\n",
-//					speed_fl_rpm, speed_fr_rpm, speed_bl_rpm, speed_br_rpm,
-//					fAcc[0],fAcc[1],fAcc[2],fAngle[0],fAngle[1],fAngle[2]);
-//			printf("%.1f ,%.1f ,%.1f ,%.1f\r\n",
-//					speed_fl_rpm, speed_fr_rpm, speed_bl_rpm, speed_br_rpm);
-			
 		}
         TIM_ClearITPendingBit(TIM1, TIM_IT_Update); // 清除中断标志位
     }

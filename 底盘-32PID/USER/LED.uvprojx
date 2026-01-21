@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\WHELL;..\HARDWARE\Timer;..\HARDWARE;..\HARDWARE\OLED;..\SOFTWARE\modbus;..\HARDWARE\KEY</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\WHELL;..\HARDWARE\Timer;..\HARDWARE\OLED;..\SOFTWARE\modbus;..\SOFTWARE\Translation</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -469,6 +469,16 @@
               <FileName>modbus.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\SOFTWARE\modbus\modbus.h</FilePath>
+            </File>
+            <File>
+              <FileName>Translation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SOFTWARE\Translation\Translation.c</FilePath>
+            </File>
+            <File>
+              <FileName>Translation.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SOFTWARE\Translation\Translation.h</FilePath>
             </File>
           </Files>
         </Group>
