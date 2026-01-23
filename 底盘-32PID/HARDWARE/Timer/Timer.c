@@ -38,8 +38,8 @@ void Timer1_Init(u16 arr,u16 psc)
 	
   //设置优先级
   NVIC_InitStructure.NVIC_IRQChannel = TIM1_UP_IRQn;  
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;//先占优先级0级
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;  	   //从优先级0级
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;//先占优先级0级
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;  	   //从优先级0级
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure); 
 
@@ -55,7 +55,7 @@ void TIM1_UP_IRQHandler(void)
 		UartRxMonitor(1);
 		timer_1++;
 		timer_2++;
-		if(timer_1 >= 200)
+		if(timer_1 >= 150)
 		{
 			timer_1 = 0;
 			// 在这里添加200ms中断的处理代码

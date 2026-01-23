@@ -6,6 +6,7 @@ u16 ReadDateVal = 0;
 u16 HolidingRegister[MAX_REGISTERS];
 u8 RegCount;                          // 实际读取的寄存器数量
 u8 DataReady;                 // 数据接收完成标志
+volatile u8 modbus_busy = 0;
 
 /**************************************************
 函数名称：USART2_Init(u32 bound)
@@ -236,6 +237,8 @@ void UartDriverMe(void)
             //printf("CRC-gogogo\r\n");
             
             // 解析Modbus响应
+			modbus.RS485Busy = 0;  // 释放总线
+			modbus_busy = 0;
             ParseModbusResponse(buf, len);
         }
 		else
@@ -297,7 +300,7 @@ void ParseModbusResponse(u8 *buf, u8 len)
         
         // 设置数据就绪标志
         DataReady = 1;
-        modbus.RS485Busy = 0;  // 释放总线
+        
     }
 }
 
@@ -320,6 +323,9 @@ void RS485_RW_Opr(u8 ucAddr,u8 ucCmd,u16 ucReg,u16 uiDate)
 	unsigned char crcl;
 	unsigned char crch;	
 	unsigned char ucBuf[8];
+	
+//	if(modbus_busy) return;  // 忙则退出
+	modbus_busy = 1;
 	
 	ucBuf[0] = ucAddr;				/* 从机地址 */
 	ucBuf[1] = ucCmd;				/* 命令 06 写 03 读 */
