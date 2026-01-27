@@ -1,9 +1,8 @@
 #include "Translation.h"
 
-MotorParams_t motor_params1;//第一个驱动
-MotorParams_t motor_params2;//第二个驱动
-MotorParams_t motor_params3;//第一个驱动
-MotorParams_t motor_params4;//第二个驱动
+MotorParams_t motor_params;//第一个驱动
+
+int32_t MotorSpeed[4] = {0, 0, 0, 0};
 
 
 /**
@@ -184,7 +183,7 @@ void PrintMotorParameters(MotorParams_t *params)
     printf("IN3电压: %.2f V\n", params->in3_voltage);
     printf("温度: %.1f °C\n", params->temperature);
     printf("电源电压: %.1f V\n", params->power_voltage);
-    printf("电机转速: %lu RPM\n", params->motor_speed);
+    printf("电机转速: %d RPM\n", params->motor_speed);
     printf("输入信号类型: 0x%04X\n", params->signal_type);
     printf("IN1 PWM占空比: %.1f%%\n", params->in1_pwm_duty);
     printf("IN1脉冲频率: %lu Hz\n", params->in1_pulse_freq);
@@ -198,6 +197,25 @@ void PrintMotorParameters(MotorParams_t *params)
     printf("IN2脉宽: %lu us\n", params->in2_pulse_width);
     printf("剩余完成时间: %lu ms\n", params->remaining_time);
     printf("位置控制状态: %d\n", params->pos_ctrl_status);
+}
+
+/**
+ * @brief 解析从机转速（简单版本）
+ * @param registers 寄存器数组（高16位+低16位）
+ * @param motor_id 电机ID（1-4）
+ * @return int32_t 电机转速
+ */
+int32_t ParseSpeedOnly(u16 *registers, u8 motor_id)
+{
+    if(motor_id < 1 || motor_id > 4) return 0;
+    int32_t speed;
+    // 组合32位有符号整数
+    speed = (int32_t)(((uint32_t)registers[0] << 16) | registers[1]);
+    
+    // 存储到全局数组
+    MotorSpeed[motor_id-1] = speed;
+	
+    return speed;
 }
 
 

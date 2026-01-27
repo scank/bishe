@@ -4,6 +4,7 @@
 #include "sys.h"
 #include "stdio.h"
 #include "delay.h"
+#include "ModbusCrc.h"
 #include "usart.h"
 #include "Translation.h"
 
@@ -15,22 +16,12 @@
 // 定义读取的最大寄存器数量
 #define MAX_REGISTERS 36  // 对应0x24个寄存器
 
-typedef enum {
-    MODBUS_IDLE,      // 空闲状态
-    MODBUS_SENDING,   // 发送中
-    MODBUS_WAITING,   // 等待响应
-    MODBUS_RECEIVING, // 接收中
-} ModbusState_t;
-
-typedef struct
-{
+typedef struct{
     u8 Modbus_RX_BUF[100]; 		//modbus的接收数据缓冲区
 	u8 Modbus_RX_Cnt;  	 		//modbus端口已经接收到的数据个数
 	u8 Modbus_RX_Flag;	    	//modbus收到一帧数据的标志
 	u8 RS485Busy;				// 主机发送数据后置1 接收到应答后清零
-
 }MODBUS;
-
 
 
 extern MODBUS modbus;

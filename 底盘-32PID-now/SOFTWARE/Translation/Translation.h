@@ -4,7 +4,7 @@
 #include "sys.h"
 #include "modbus.h"
 
-#define debug_printf 1
+#define debug_printf 0
 
 typedef struct {
     // 0x0010 - 0x0011
@@ -52,13 +52,13 @@ typedef struct {
     uint8_t pos_ctrl_status;       // 位置控制完成状态
 } MotorParams_t;
 
-extern MotorParams_t motor_params1;//第一个驱动
-extern MotorParams_t motor_params2;//第二个驱动
-extern MotorParams_t motor_params3;//第一个驱动
-extern MotorParams_t motor_params4;//第二个驱动
+
+extern MotorParams_t motor_params;//第一个驱动
+extern int32_t MotorSpeed[4];
 
 int ParseMotorParameters(uint16_t *regs, uint16_t start_addr, MotorParams_t *params);
 void PrintMotorParameters(MotorParams_t *params);
+int32_t ParseSpeedOnly(u16 *registers, u8 motor_id);
 
 
 #endif

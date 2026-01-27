@@ -9,7 +9,7 @@
 
 void Balance_Motor_Init(void);
 void PWM_Init(u16 arr,u16 psc);//初始化PWM 10KHZ 高频可以防止电机低频时的尖叫声  7200 1
-int Myabs(int a);
+int32_t Myabs(int32_t a);
 void MotorControl(char direction,int left_front_MotorPWM, int right_front_MotorPWM,int left_behind_MotorPWM, int right_behind_MotorPWM);
 
 
@@ -28,7 +28,7 @@ void Left_Front_Stop(void);   // 左前轮停止——AIN
 void Right_Front_Stop(void);  // 右前轮停止——BIN
 void Left_Behind_Stop(void);  // 左后轮停止——CIN
 void Right_Behind_Stop(void); // 右后轮停止——DIN
-
+void Moto_Ros_Pwm(u8 num, int32_t pwm);
 
 
 

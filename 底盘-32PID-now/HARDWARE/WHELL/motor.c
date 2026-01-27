@@ -114,12 +114,12 @@ void PWM_Init (u16 arr,u16 psc)//初始化PWM 10KHZ 高频可以防止电机低频时的尖叫声 
 
 }
 /*绝对值函数*/
-int Myabs(int a)
+int32_t Myabs(int32_t a)
 { 		   
-	  int temp;
-		if(a<0)  temp=-a;  
-	  else temp=a;
-	  return temp;
+	int32_t temp;
+	if(a<0)  temp=-a;  
+	else temp=a;
+	return temp;
 }
 
 //***********电机控制*******************************
@@ -290,5 +290,51 @@ void MotorControl(char direction,int left_front_MotorPWM, int right_front_MotorP
 	TIM_SetCompare3(TIM8, left_behind_MotorPWM);  
 	TIM_SetCompare4(TIM8, right_behind_MotorPWM); 
 }
-
-
+/**
+  * @brief  设置麦克纳姆轮小车的单个电机PWM
+  * @param  num: 电机编号，范围1-4分别对应左前、右前、左后、右后电机
+  * @param  pwm: 电机PWM值，正数表示正转，负数表示反转，0表示停止所有电机
+  * @retval None
+  */
+void Moto_Ros_Pwm(u8 num, int32_t pwm)
+{
+    
+    if (pwm == 0) {
+		TIM_SetCompare1(TIM8, pwm);
+		TIM_SetCompare2(TIM8, pwm);
+		TIM_SetCompare3(TIM8, pwm);
+		TIM_SetCompare4(TIM8, pwm);
+        Left_Front_Stop();
+        Left_Behind_Stop();
+        Right_Front_Stop();
+        Right_Behind_Stop();
+        return;
+    }
+    
+    uint32_t abs_pwm = Myabs(pwm);
+    
+    switch(num) {
+        case 1: 
+            (pwm > 0) ? Left_Front_Go() : Left_Front_Back();
+            TIM_SetCompare1(TIM8, abs_pwm);
+            break;
+            
+        case 2: 
+            (pwm > 0) ? Right_Front_Go() : Right_Front_Back();
+            TIM_SetCompare2(TIM8, abs_pwm);
+            break;
+            
+        case 3:
+            (pwm > 0) ? Left_Behind_Go() : Left_Behind_Back();
+            TIM_SetCompare3(TIM8, abs_pwm);
+            break;
+            
+        case 4: 
+            (pwm > 0) ? Right_Behind_Go() : Right_Behind_Back();
+            TIM_SetCompare4(TIM8, abs_pwm);
+            break;
+            
+        default: 
+            break;
+    }
+}

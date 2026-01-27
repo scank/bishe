@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\WHELL;..\HARDWARE\Timer;..\HARDWARE\OLED;..\SOFTWARE\modbus;..\SOFTWARE\Translation</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\WHELL;..\HARDWARE\Timer;..\HARDWARE\OLED;..\SOFTWARE\modbus;..\SOFTWARE\Translation;..\SOFTWARE\ROS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -479,6 +479,26 @@
               <FileName>Translation.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\SOFTWARE\Translation\Translation.h</FilePath>
+            </File>
+            <File>
+              <FileName>ModbusCrc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SOFTWARE\modbus\ModbusCrc.c</FilePath>
+            </File>
+            <File>
+              <FileName>ModbusCrc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SOFTWARE\modbus\ModbusCrc.h</FilePath>
+            </File>
+            <File>
+              <FileName>ROS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SOFTWARE\ROS\ROS.c</FilePath>
+            </File>
+            <File>
+              <FileName>ROS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SOFTWARE\ROS\ROS.h</FilePath>
             </File>
           </Files>
         </Group>

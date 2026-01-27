@@ -1,0 +1,42 @@
+..\obj\ros.o: ..\SOFTWARE\ROS\ROS.c
+..\obj\ros.o: ..\SOFTWARE\ROS\ROS.h
+..\obj\ros.o: ..\SYSTEM\sys\sys.h
+..\obj\ros.o: ..\USER\stm32f10x.h
+..\obj\ros.o: ..\CORE\core_cm3.h
+..\obj\ros.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\ros.o: ..\USER\system_stm32f10x.h
+..\obj\ros.o: ..\USER\stm32f10x_conf.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
+..\obj\ros.o: ..\USER\stm32f10x.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_bkp.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_can.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_cec.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_crc.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_dac.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_dma.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_exti.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_flash.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_fsmc.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_i2c.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_pwr.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_rtc.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_sdio.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_spi.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
+..\obj\ros.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\ros.o: ..\HARDWARE\LED\led.h
+..\obj\ros.o: D:\keil 5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ros.o: ..\SOFTWARE\modbus\modbus.h
+..\obj\ros.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\ros.o: ..\SYSTEM\delay\delay.h
+..\obj\ros.o: ..\SOFTWARE\modbus\ModbusCrc.h
+..\obj\ros.o: ..\SYSTEM\usart\usart.h
+..\obj\ros.o: ..\HARDWARE\WHELL\motor.h
+..\obj\ros.o: ..\SOFTWARE\modbus\modbus.h
+..\obj\ros.o: ..\SOFTWARE\Translation\Translation.h

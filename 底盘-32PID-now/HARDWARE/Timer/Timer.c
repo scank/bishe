@@ -1,9 +1,11 @@
 #include "Timer.h"
 
 u8 modbus_query_flag;
-u16 timer_1 = 0;
-u16 timer_2 = 0;
-ModbusState_t modbus_state = MODBUS_IDLE;
+u8 Ros_Data_flag;
+u8 target_slave;
+u8 timer_1 = 0;
+u8 timer_2 = 0;
+
 /*
 	波特率 9600
 	1位数据的时间为 1000000us/9600bit/s = 104us
@@ -55,22 +57,18 @@ void TIM1_UP_IRQHandler(void)
 		UartRxMonitor(1);
 		timer_1++;
 		timer_2++;
-		if(timer_1 >= 25)
+		if(timer_1 >= 10)
 		{
 			timer_1 = 0;
-			// 在这里添加200ms中断的处理代码
+			target_slave ++;
+			target_slave = (target_slave > 4) ? 1 : target_slave;
 //			encoder_car();
-//			if(modbus_state == MODBUS_IDLE)
-//			{
-//				modbus_query_flag = 1;
-//				modbus_state = MODBUS_SENDING;
-//			}
 			modbus_query_flag = 1;
 		}
-		if(timer_2 >= 200)
+		if(timer_2 >= 41)
 		{
 			timer_2 = 0;
-			LED1 = !LED1;
+			Ros_Data_flag = 1;
 		}
         TIM_ClearITPendingBit(TIM1, TIM_IT_Update); // 清除中断标志位
     }

@@ -6,7 +6,10 @@
 #include "usart.h"	
 #include "modbus.h"
 #include "led.h"
+#include "ROS.h"
+
+extern u8 target_slave;
 extern u8 modbus_query_flag;
-extern ModbusState_t modbus_state;
+extern u8 Ros_Data_flag;
 void Timer1_Init(u16 arr,u16 psc);
 #endif

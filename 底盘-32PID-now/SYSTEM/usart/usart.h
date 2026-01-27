@@ -6,20 +6,20 @@
 #include "modbus.h"
 extern float fAcc[3], fGyro[3], fAngle[3]; // 加速度 角速度 角度
 extern float temp;       // 温度
-
-
+extern u8 Imu_Data_flag;
+extern u8 buf3[11];
 void parseWT61HexData(u8 *buf);
 
 void USART_SendByte(USART_TypeDef* USARTx,uint16_t Data);
 
-void USART1_Init(u32 bound);
+//void USART1_Init(u32 bound);
 void USART3_Init(u32 bound);
 void USART4_Init(u32 bound);
 void USART5_Init(u32 bound);
 
-void USART1_Send_Byte(u8 Data);
-void USART1_Send_nByte(u8 *Data, u16 size);
-void USART1_Send_Str(u8 *Data);
+//void USART1_Send_Byte(u8 Data);
+//void USART1_Send_nByte(u8 *Data, u16 size);
+//void USART1_Send_Str(u8 *Data);
 
 //void USART2_Send_Byte(u8 Data);
 //void USART2_Send_nByte(u8 *Data, u16 size);
